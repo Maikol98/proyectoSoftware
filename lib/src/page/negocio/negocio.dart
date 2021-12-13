@@ -33,10 +33,18 @@ class _RestaurantePageState extends State<RestaurantePage> {
           _posterTitulo(),
           _descripcion(),
           _buton(),
+          _servicio(),
           _crearCajaComentario(),
     
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.purple,
+        child: Icon(
+            Icons.account_balance_wallet_rounded,
+            color: Colors.black,
+          ),
+        onPressed: () => Navigator.pushNamed(context, 'predict')),
     );
   }
 
@@ -115,6 +123,8 @@ class _RestaurantePageState extends State<RestaurantePage> {
     );
   }
 
+  
+
   Widget _buton(){
     return Container(
       margin: EdgeInsets.all(10.0),
@@ -126,6 +136,24 @@ class _RestaurantePageState extends State<RestaurantePage> {
           Text('Ver Fotos'),
           SizedBox(width: 10.0,),
           Icon(Icons.camera_alt)
+          ],
+        ),
+        onPressed: () {
+          Navigator.pushNamed(context, 'fotos');
+        },
+      ),
+    );
+  }
+
+  Widget _servicio(){
+    return Container(
+      margin: EdgeInsets.all(10.0),
+      child: CupertinoButton(
+        color: Colors.grey,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+          Text('Publicar en el catalogo de Servicios'),
           ],
         ),
         onPressed: () {

@@ -36,10 +36,10 @@ class MenuWidget extends StatelessWidget {
             title: Text('REGISTRAR UN NEGOCIO'),
             onTap: () => Navigator.pushNamed(context, 'negociocreate'),
           ),
-          ListTile(
-            title: Text('AQUI APLICAMOS LA IA'),
-            onTap: () => Navigator.pushNamed(context, 'predict'),
-          ),
+          // ListTile(
+          //   title: Text('AQUI APLICAMOS LA IA'),
+          //   onTap: () => Navigator.pushNamed(context, 'predict'),
+          // ),
           ListTile(
             title: Text('VER MI NEGOCIO'),
             onTap: () => Navigator.pushNamed(context, 'listarNegocio'),

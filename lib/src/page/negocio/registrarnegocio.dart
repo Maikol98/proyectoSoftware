@@ -12,13 +12,13 @@ class RegistrarNegocio extends StatefulWidget {
 
 class _RegistrarNegocioState extends State<RegistrarNegocio> {
   
-  TextEditingController _carnet = new TextEditingController();
+  // TextEditingController _carnet = new TextEditingController();
   TextEditingController _nombre = new TextEditingController();
   TextEditingController _apellido = new TextEditingController();
-  TextEditingController _direccion = new TextEditingController();
-  TextEditingController _telefono = new TextEditingController();
-  TextEditingController _correo = new TextEditingController();
-  TextEditingController _password = new TextEditingController();
+  // TextEditingController _direccion = new TextEditingController();
+  // TextEditingController _telefono = new TextEditingController();
+  // TextEditingController _correo = new TextEditingController();
+  // TextEditingController _password = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {

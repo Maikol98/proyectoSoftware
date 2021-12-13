@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
         'predict'       : (BuildContext context)=>PredictPage(),
       },
       theme: ThemeData(
-        primaryColor: Color.fromRGBO(8, 89, 114,1),
+        primaryColor: Colors.blue,
       ),
     );
   }

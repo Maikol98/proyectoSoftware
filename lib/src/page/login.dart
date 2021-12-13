@@ -28,7 +28,7 @@ class _LoginPageState extends State<LoginPage> {
       body: Stack(
         children: <Widget>[
           _fondoApp(),
-          _loginCreate(),
+          // _loginCreate(),
         ],
       ),
       
@@ -37,25 +37,18 @@ class _LoginPageState extends State<LoginPage> {
 
     Widget _fondoApp(){
     return Container(
+      padding: EdgeInsets.all(40),
       width: double.infinity,
       height: double.infinity,
-      color: Color.fromRGBO(8, 89, 114,1),
+      child: _loginCreate(),
+      // color: Color.fromRGBO(8, 89, 114,1),
     );
 
   }
 
 
   Widget _loginCreate(){
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: 120, horizontal: 60),
-      width: 350,
-      height: 480,
-      decoration: BoxDecoration(
-        color: Color.fromRGBO(8, 158, 168, 0.4),
-        borderRadius: BorderRadius.circular(20)
-      ),
-      padding: EdgeInsets.symmetric(horizontal: 20.0),
-      child: ListView(
+    return ListView(
         padding: EdgeInsets.only(top: 40.0),
         children: <Widget>[
           _imagenPerfil(),
@@ -68,8 +61,7 @@ class _LoginPageState extends State<LoginPage> {
           SizedBox(height: 15.0),
           _crearButton(),
         ],
-      ),
-    );
+      );
   }
 
   Widget _inputCorreo(){
@@ -102,7 +94,8 @@ class _LoginPageState extends State<LoginPage> {
               _iconoContra = Icons.lock_outline;
               _ocultarContra = !_ocultarContra;
             }
-            setState(() {});
+            setState(() {
+            });
           },
         ),
         border: OutlineInputBorder(
@@ -123,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _crearButton(){
     return CupertinoButton(
-      color: Colors.grey,
+      color: Colors.blue,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -142,34 +135,37 @@ class _LoginPageState extends State<LoginPage> {
   Widget _opciones(){
     return Column(
       children: <Widget>[
-        FlatButton(
-          splashColor: Colors.white10,
+        TextButton(
           child: Text('REGISTRATE',
             style: TextStyle(
-              decoration: TextDecoration.underline
+              decoration: TextDecoration.underline,
+              color: Colors.black
             ),
           ),
-          onPressed: () => Navigator.pushNamed(context, 'createUser'),
+          onPressed: () => Navigator.pushNamed(context, 'createUser')
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             IconButton(
-              icon: FaIcon(FontAwesomeIcons.facebook, size: 40.0), 
+              icon: FaIcon(FontAwesomeIcons.facebook, size: 40.0),
+              color: Colors.blue,
               onPressed: () {
               
               },
             ),
             SizedBox(width: 15.0),
             IconButton(
-              icon: FaIcon(FontAwesomeIcons.google,size: 40.0), 
+              icon: FaIcon(FontAwesomeIcons.google,size: 40.0),
+              color: Color.lerp(Colors.red, Colors.blue, 0.4),
               onPressed: () {
                 
               },
             ),
             SizedBox(width: 15.0),
             IconButton(
-              icon: FaIcon(FontAwesomeIcons.instagram,size: 40.0), 
+              icon: FaIcon(FontAwesomeIcons.instagram,size: 40.0),
+              color: Colors.pink,
               onPressed: () {
                 
               },

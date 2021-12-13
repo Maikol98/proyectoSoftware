@@ -1,7 +1,7 @@
 
 class Negocios{
 
-  List<Negocio> items = new List();
+  List<Negocio> items ;
   Negocios();
 
   Negocios.fromJsonList(List<dynamic> jsonList){

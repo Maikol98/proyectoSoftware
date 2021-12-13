@@ -1,5 +1,5 @@
 class Usuarios{
-  List<Usuario> items = new List();
+  List<Usuario> items;
   Usuarios();
 
   Usuarios.fromJsonList(List<dynamic> jsonList){

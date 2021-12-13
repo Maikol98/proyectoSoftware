@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:software/src/providers/negocio_provider.dart';
+// import 'package:software/src/providers/negocio_provider.dart';
 import 'package:software/src/providers/user_provider.dart';
 
 class CreateUserPage extends StatefulWidget {

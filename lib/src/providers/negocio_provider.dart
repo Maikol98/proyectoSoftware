@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:software/src/models/Negocio_model.dart';
-import 'package:software/src/preferencias_usuario/preferecias_usuario.dart';
+// import 'package:software/src/preferencias_usuario/preferecias_usuario.dart';
 
 class UsuarioProvider{
-  final _prefs = new PreferenciasUsuario();
+  // final _prefs = new PreferenciasUsuario();
   String _url = 'radiant-savannah-77285.herokuapp.com';
   
   //Gestionar Usuario

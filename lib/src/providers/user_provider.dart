@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:http/http.dart' as http;
 import 'package:software/src/models/usuario_model.dart';
@@ -20,8 +21,9 @@ class ActivoFijoProvider{
       'email' : user,
       'password' : pass
     });
-
+    // log(resp.body);
     final decodeData = json.decode(resp.body);
+    // log(decodeData);
     if ( decodeData == 0 ) {
       return 0;
     }else{
@@ -39,6 +41,8 @@ class ActivoFijoProvider{
     final resp = await http.post(url,body: datos);
 
     final decodeData = json.decode(resp.body);
+
+    log(decodeData);
     return 1;
   }
 

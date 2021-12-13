@@ -42,6 +42,13 @@ class _PanaderiaPageState extends State<PanaderiaPage> {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.purple,
+        child: Icon(
+            Icons.account_balance_wallet_rounded,
+            color: Colors.black,
+          ),
+        onPressed: () => Navigator.pushNamed(context, 'predict')),
     );
   }
 
